@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      #resume {
+        display: none; /* Hide resume upload field by default */
+      }
+    </style>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">AI Job Portal</div>
+      <div id="google_translate_element"></div>
+    </header>
 
+    <section class="signup">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="user-type">I am a:</label>
+        <select id="user-type" name="user-type" required>
+          <option value="job-seeker">Job Seeker</option>
+          <option value="recruiter">Recruiter</option>
+        </select>
+
+        <label for="resume" id="resume-label" style="display: none"
+          >Upload resume</label
+        >
+        <input type="file" id="resume" name="resume" />
+
+        <button type="button">Sign Up</button>
+        <button type="button" onclick="location.href='login.html'">
+          Login
+        </button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 AI Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const userType = document.getElementById("user-type");
+      const resumeInput = document.getElementById("resume");
+      const resumeLabel = document.getElementById("resume-label");
+
+      // Show or hide resume input based on user type selection
+      userType.addEventListener("change", function () {
+        if (userType.value === "job-seeker") {
+          resumeInput.style.display = "block";
+          resumeLabel.style.display = "block";
+          resumeInput.setAttribute("required", "required");
+        } else {
+          resumeInput.style.display = "none";
+          resumeLabel.style.display = "none";
+          resumeInput.removeAttribute("required");
+        }
+      });
+
+      // Trigger change event on page load to handle default selection
+      window.addEventListener("DOMContentLoaded", function () {
+        userType.dispatchEvent(new Event("change"));
+      });
+    </script>
+  </body>
+</html>
