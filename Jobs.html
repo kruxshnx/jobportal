@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">AI Job Portal</div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <div id="google_translate_element"></div>
+    </header>
+
+    <main>
+      <h1>Job Listings</h1>
+      <input
+        type="text"
+        id="search-box"
+        placeholder="Search for jobs..."
+        onkeyup="filterTable()"
+      />
+      <table id="jobs-table">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>Job Type</th>
+            <th>Salary</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Software Engineer</td>
+            <td>Tech Corp</td>
+            <td>New York, NY</td>
+            <td>Full-time</td>
+            <td>$120,000</td>
+            <td>Develop and maintain software applications.</td>
+            <td>
+              <button onclick="applyJob('Software Engineer')">Apply</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Data Scientist</td>
+            <td>Data Inc.</td>
+            <td>San Francisco, CA</td>
+            <td>Full-time</td>
+            <td>$130,000</td>
+            <td>Analyze and interpret complex data sets.</td>
+            <td><button onclick="applyJob('Data Scientist')">Apply</button></td>
+          </tr>
+          <tr>
+            <td>Web Developer</td>
+            <td>Web Solutions</td>
+            <td>Austin, TX</td>
+            <td>Contract</td>
+            <td>$90,000</td>
+            <td>Design and develop websites.</td>
+            <td><button onclick="applyJob('Web Developer')">Apply</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <script>
+      function filterTable() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("search-box");
+        filter = input.value.toLowerCase();
+        table = document.getElementById("jobs-table");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+          tr[i].style.display = "none";
+          td = tr[i].getElementsByTagName("td");
+          for (j = 0; j < td.length; j++) {
+            if (td[j]) {
+              txtValue = td[j].textContent || td[j].innerText;
+              if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      function applyJob(jobTitle) {
+        alert("You have applied for the " + jobTitle + " position.");
+      }
+    </script>
+  </body>
+</html>
