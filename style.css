@@ -1,0 +1,438 @@
+:root {
+    --font-family: Arial, sans-serif;
+    --background-color: #e3f2fd;
+    /* Light Blue */
+    --primary-color: #1e88e5;
+    /* Blue */
+    --secondary-color: #1565c0;
+    /* Dark Blue */
+    --text-color: #ffffff;
+    /* White */
+    --heading-color: #1e88e5;
+    /* Blue */
+    --padding: 10px;
+    --margin: 20px;
+    --max-width: 800px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 5px;
+    --input-border: 1px solid #ccc;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#google_translate_element {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: var(--padding) 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: var(--padding);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+}
+
+section {
+    margin: var(--margin) auto;
+    padding: calc(var(--padding) * 2);
+    max-width: var(--max-width);
+    background-color: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-color);
+}
+
+.hero h1,
+.hero p {
+    color: var(--heading-color);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero .button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+.hero .button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button[type="button"]:hover {
+    background-color: #777;
+}
+
+/* Specific Section Styles */
+.signup {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--heading-color);
+}
+
+.signup h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup input,
+.signup select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup button:hover {
+    background-color: var(--secondary-color);
+}
+
+.signup h1,
+.login h1,
+.about h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Feedback Section Styles */
+.feedback {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--heading-color);
+}
+
+.feedback h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feedback select,
+.feedback textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+}
+
+.feedback button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--heading-color);
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Login Section Styles */
+.login {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--heading-color);
+}
+
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login button:hover {
+    background-color: var(--secondary-color);
+}
