@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">AI Job Portal</div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <div id="google_translate_element"></div>
+    </header>
+    <main>
+      <h1>Post a Job</h1>
+      <form action="submit-job.html" method="post">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" name="job-title" required />
+
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" name="company-name" required />
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+
+        <label for="job-type">Job Type:</label>
+        <select id="job-type" name="job-type" required>
+          <option value="full-time">Full-Time</option>
+          <option value="part-time">Part-Time</option>
+          <option value="contract">Contract</option>
+          <option value="internship">Internship</option>
+        </select>
+
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" required />
+
+        <label for="description">Job Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          required
+        ></textarea>
+        <br />
+
+        <button type="submit">Post Job</button>
+      </form>
+    </main>
+  </body>
+</html>
